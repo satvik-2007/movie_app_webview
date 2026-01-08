@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Movie App</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div id="loginPage" style="display:none; padding:20px;">
+  <h2>Login</h2>
+  <input id="username" placeholder="Username"><br><br>
+  <input id="password" type="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+  </div>
+<div id="app" style="display:none;">
+  <div id="pullIndicator" style="display:none; text-align:center;">
+  🔄 Release to refresh
+  </div>
+
+  <h1>
+    Movie App
+    <button onclick="showHome()">🏠 Home</button>
+    <button onclick="showSettings()">⚙️ Settings</button>
+  </h1>
+  <div id="categories" style="margin: 20px 0;">
+    <button onclick="fetchByCategory(28)">Action</button>
+    <button onclick="fetchByCategory(35)">Comedy</button>
+    <button onclick="fetchByCategory(18)">Drama</button>
+    <button onclick="fetchByCategory(27)">Horror</button>
+    <button onclick="fetchPopular()">All</button>
+    <div id="desktopRefresh">
+    <button onclick="refreshMovies()">🔄 Refresh</button>
+  </div>
+</div>
+<div>
+  <input 
+    type="text" 
+    id="search"
+    placeholder="Search movies..."
+    onkeyup="searchMovies()"
+    style="padding: 10px; width: 300px;"
+  >
+
+  </h1>
+
+  <div id="movies" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+  <div id="movieDetails" style="display:none; padding:20px; border-top:1px solid #ccc;"></div>
+  <div id="settingsPage" style="display:none; padding:20px;">
+    <h2>Settings</h2>
+
+    <button onclick="toggleTheme()">🌗 Toggle Dark / Light Mode</button>
+    <br><br>
+
+    <button onclick="logout()">🔐 Logout</button>
+    <p style="margin-top:20px; font-size:14px;">
+      Movie App Demo using TMDB API
+    </p>
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
