@@ -1,16 +1,26 @@
-# movie_app_webview
+# Movie App (Flutter + WebView)
 
-A new Flutter project.
+## Description
+A movie browsing application built using Flutter and WebView.
 
-## Getting Started
+The app fetches movie data from the TMDB API and displays popular movies with
+genre filters and search functionality.
 
-This project is a starting point for a Flutter application.
+## Features
+- Browse popular movies
+- Filter movies by genre (Action, Comedy, Drama, Horror)
+- Search movies by name
+- Works on Android and Web
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
+- Flutter
+- WebView
+- HTML, CSS, JavaScript
+- TMDB API
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup Instructions
+1. Clone the repository  
+2. Add your TMDB API key in `assets/web/config.local.js`  
+3. Run the app using:
+   ```bash
+   flutter run
